@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css animations</title>
+    <style>
+	*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.round{
+    border: solid;
+    border-width: 10px;
+    color:wheat;
+    text-align: center;
+    padding: 1%;
+    border-radius: 50px;
+    background-color: coral;
+    width: 50px;
+    height: 50px;
+    animation-name: drift;
+    animation-duration: 3s;
+    transition: background 1s, transform .7s;
+    cursor: pointer;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.round2{
+    border: solid;
+    border-width: 10px;
+    color:wheat;
+    text-align: center;
+    padding: 1%;
+    border-radius: 50px;
+    background-color: coral;
+    width: 50px;
+    height: 50px;
+    animation: drift 4s 1s infinite linear both alternate;
+
+}
+
+/*
+.round:hover{
+    background-color: rgb(151, 76, 23);
+    transform: rotate(360deg);    
+}
+*/
+
+@keyframes drift {
+    from{
+        transform: translate(-150px);
+    }
+    to{
+        transform: translate(1500px);
+    }
+}
+
+	</style>
+</head>
+<body>
+    <div class="round">
+        <h3>hover me</h3>
+    </div>
+    <div class="round2">
+        <h3>hover 2</h3>
+    </div>
+</body>
+</html>
