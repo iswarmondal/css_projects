@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css animations</title>
+
+<style>
+    *{
+        border: 0;
+        background-color: rgb(219, 238, 255);
+    }
+
+    .round-1, .text {
+        background-color: rgb(235, 212, 183);
+        border: solid rgb(0, 73, 104);
+        border-radius: 82px;
+        width: 82px;
+        text-align: center;
+        padding: 1%;
+        cursor: pointer;
+        animation:drift 3s 1s infinite alternate both linear;;
+    }
+
+    @keyframes drift {
+        from{
+            transform: translateX(0px);
+        }
+        to{
+            transform: translateX(1000px);
+        }
+    }
+/*
+    .round-1:hover, .text:hover{
+        transform: rotate(360deg);
+        background-color: cyan;
+    }
+*/
+</style>
+
+</head>
+<body>
+    <div class="round-1">
+        <h3 class="text">hover over me</h3>
+    </div>
+</body>
+</html>
